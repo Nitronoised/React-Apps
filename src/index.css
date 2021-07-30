@@ -1,13 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.app-container {
+  position: relative;
+  margin: 40px auto;
+  width: 600px;
+  height: auto;
+  border: solid rgb(231, 231, 231) 1px;
+  padding-bottom: 80px;
+}
+.navigation-icon {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+}
+.navigation-box {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  border-top: solid rgb(231, 231, 231) 1px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+}
+.navigation-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.navigation-item:hover {
+  opacity: 0.8;
+  color: rgb(87, 1, 1);
+}
+.navigation-item h3 {
+  font-size: 14px;
+}
+.navigation-item img {
+  height: 30px;
+  width: 30px;
+}
+.arrow-icon {
+  color: gray;
+  font-size: 18px;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.location-box {
+  text-align: center;
+  padding: 15px 25px;
+  border-bottom: solid rgb(231, 231, 231) 1px;
+}
+
+.location-box h2 {
+  font-weight: 300;
+  font-size: 22px;
+}
+.artist-list {
+  height: 650px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2px;
+  overflow-y: auto;
+}
+.artist-box {
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: solid rgb(231, 231, 231) 1px;
+}
+.artist-box img {
+  height: 100px;
+}
+
+.artist-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.artist-info img {
+  margin-right: 10px;
+}
+
+.artist-info h2 {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+.artist-info p {
+  color: gray;
+  font-size: 13px;
+}
+.artist-thumbnail-info {
+  display: flex;
+  flex-direction: column;
+}
+.to-artistAlbum-link {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.navItem-link {
+  text-decoration: none;
+  color: inherit;
+}
+.search-box {
+  width: 95%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid rgb(231, 231, 231) 1px;
+}
+.search-icon {
+  height: 50px;
+  font-size: 25px;
+  opacity: 0.6;
+  padding-right: 10px;
+  border-right: solid rgb(231, 231, 231) 1px;
+  border-bottom: solid rgb(231, 231, 231) 1px;
+  border-top: solid rgb(231, 231, 231) 1px;
+}
+.search-box input {
+  display: block;
+  margin: 10px auto;
+  width: 95%;
+  height: 50px;
+  font-size: 17px;
+  font-family: Calibri;
+  padding-left: 10px;
+  border: solid rgb(231, 231, 231) 1px;
+  border-right: none;
+}
+.search-box input:focus {
+  outline: none;
+}
+.error-box {
+  text-align: center;
+  color: rgb(2, 2, 148);
 }

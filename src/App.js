@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navigation from "./Components/Navigation";
+import ArtistList from "./Components/ArtistList";
+import LocationBox from "./Components/LocationBox";
+import MoviesList from "./Components/MoviesList";
+import Favorites from "./Components/Favorites";
+import ArtistAlbums from "./Components/ArtistAlbums";
+import SongsList from "./Components/SongsList";
+import { Redirect } from 'react-router-dom';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="app-container">
+
+      <Router>
+        <Redirect to='/artist' />
+        <LocationBox />
+
+
+        <Switch>
+          <Route exact path="/artist/:id" component={ArtistAlbums} />
+          <Route exact path="/artist/:id/:album" component={SongsList} />
+          <Route path="/movies" component={MoviesList} />
+          <Route path="/artist" component={ArtistList} />
+          <Route path="/favorites" component={Favorites} />
+        </Switch>
+        <Navigation />
+
+      </Router>
     </div>
+
   );
 }
 
 export default App;
+
+// 1.LocationBox needs access to certain state to update location
+// 2.Location hook can tell Navigation to update icons accordingly
