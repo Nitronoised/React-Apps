@@ -7,6 +7,7 @@ import Favorites from "./Components/Favorites";
 import ArtistAlbums from "./Components/ArtistAlbums";
 import SongsList from "./Components/SongsList";
 import { Redirect } from 'react-router-dom';
+import Song from './Components/Song'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Switch>
           <Route exact path="/artist/:id" component={ArtistAlbums} />
           <Route exact path="/artist/:id/:album" component={SongsList} />
+          <Route exact path="/artist/:id/:album/:song" component={Song} />
           <Route path="/movies" component={MoviesList} />
           <Route path="/artist" component={ArtistList} />
           <Route path="/favorites" component={Favorites} />
